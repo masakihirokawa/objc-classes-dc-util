@@ -46,7 +46,7 @@
 #pragma mark open url
 
 //URLを開く
-+ (void)openUrl:url
++ (void)openUrl:(NSString *)url
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
