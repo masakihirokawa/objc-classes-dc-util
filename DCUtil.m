@@ -65,4 +65,15 @@
     [alert show];
 }
 
+#pragma mark get str from plist
+
+//info.plistから文字列取得
++ (NSString *)getStrFromPlist:(NSString *)key
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"string" ofType:@"plist"];
+    NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSString *ret = [plist objectForKey:key];
+    return [ret stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+}
+
 @end
