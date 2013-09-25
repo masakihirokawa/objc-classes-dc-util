@@ -17,5 +17,6 @@
 + (void)openReviewUrl:(NSString *)appStoreId;
 + (void)showAlert:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles;
 + (NSString *)getStrFromPlist:(NSString *)key;
++ (BOOL)isIOS7;
 
 @end
